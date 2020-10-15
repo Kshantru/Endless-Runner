@@ -18,6 +18,7 @@ public class ObstacleManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        activeObstacles = new List<GameObject>();
         SpawnObstacle2();
         //activeObstacles = new List<GameObject>();
     }
