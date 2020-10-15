@@ -11,7 +11,7 @@ public class ObstacleManager : MonoBehaviour
    //  private float spawnGap = 6.0f;
     //private float safeZone = 32.0f;
     // private int amnTilesOnScreen = 7;
-  //  private int lastPrefabIndex = 0;
+    private int lastPrefabIndex = 0;
 
   //  private List<GameObject> activeObstacles;
 
@@ -33,11 +33,26 @@ public class ObstacleManager : MonoBehaviour
 		{
 			// Choose a random point to spawn the obstacle
 			int obstacleSpawnIndex = Random.Range(0, obstaclePrefabs.Length);
-			Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
+			Transform spawnPoint = transform.GetChild(RandomPrefabIndex()).transform;
 
 			// Spawn the obstace at the position
-			Instantiate(obstaclePrefabs[obstacleSpawnIndex], spawnPoint.position, Quaternion.identity, transform);
+			Instantiate(obstaclePrefabs[RandomPrefabIndex()], spawnPoint.position, Quaternion.identity, transform);
 		}
 
-   
+
+    private int RandomPrefabIndex()
+    {
+        if (obstaclePrefabs.Length <= 1)
+            return 0;
+
+        int randomIndex = lastPrefabIndex;
+        while (randomIndex == lastPrefabIndex)
+        {
+            randomIndex = Random.Range(0, obstaclePrefabs.Length);
+        }
+        lastPrefabIndex = randomIndex;
+        return randomIndex;
+    }
+
+
 }
