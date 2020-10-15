@@ -12,7 +12,7 @@ public class TileManager : MonoBehaviour
     private int amnTilesOnScreen = 7;
     private int lastPrefabIndex = 0;
 
-    public GameObject obstaclePrefab;
+    //public GameObject obstaclePrefab;
 
     private List<GameObject> activeTiles;
 
@@ -32,7 +32,7 @@ public class TileManager : MonoBehaviour
                 SpawnTile();
             }
         }
-        SpawnObstacle();
+        //SpawnObstacle();
     }
 
     // Update is called once per frame
@@ -84,14 +84,4 @@ public class TileManager : MonoBehaviour
         lastPrefabIndex = randomIndex;
         return randomIndex;
     }
-
-    public void SpawnObstacle()
-    {
-        // Choose a random point to spawn the obstacle
-        int obstacleSpawnIndex = Random.Range(1, 4);
-        Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
-
-        // Spawn the obstace at the position
-        Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity, transform);
     }
-}

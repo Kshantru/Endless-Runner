@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class ObstacleManager : MonoBehaviour
 {
-	public GameObject obstaclePrefab;
-	// private Transform playerTransform;
-	// private float spawnZ = 20.0f;
-	// private float tileLength = 20.0f;
-	//private float safeZone = 32.0f;
-	// private int amnTilesOnScreen = 7;
-	//private int lastPrefabIndex = 0;
+    public GameObject obstaclePrefab;
+    // private Transform playerTransform;
+    // private float spawnZ = 20.0f;
+    // private float tileLength = 20.0f;
+    //private float safeZone = 32.0f;
+    // private int amnTilesOnScreen = 7;
+    //private int lastPrefabIndex = 0;
 
-	//private List<GameObject> activeObstacles;
+    //private List<GameObject> activeObstacles;
 
-	// Start is called before the first frame update
-	void Start()
-	{
-		SpawnObstacle();
-		//activeObstacles = new List<GameObject>();
-
+    // Start is called before the first frame update
+    void Start()
+    {
+        SpawnObstacle();
+        //activeObstacles = new List<GameObject>();
+    }
 		// Update is called once per frame
 		void Update()
 		{
