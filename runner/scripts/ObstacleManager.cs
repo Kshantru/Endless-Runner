@@ -32,7 +32,7 @@ public class ObstacleManager : MonoBehaviour
 		public void SpawnObstacle()
 		{
 			// Choose a random point to spawn the obstacle
-			int obstacleSpawnIndex = Random.Range(1, obstaclePrefabs.Length);
+			int obstacleSpawnIndex = Random.Range(1, obstaclePrefabs.Length+1);
 			Transform spawnPoint = transform.GetChild(RandomPrefabIndex()).transform;
 
 			// Spawn the obstace at the position
@@ -48,7 +48,7 @@ public class ObstacleManager : MonoBehaviour
         int randomIndex = lastPrefabIndex;
         while (randomIndex == lastPrefabIndex)
         {
-            randomIndex = Random.Range(1, obstaclePrefabs.Length);
+            randomIndex = Random.Range(1, obstaclePrefabs.Length+1);
         }
         lastPrefabIndex = randomIndex;
         return randomIndex;
