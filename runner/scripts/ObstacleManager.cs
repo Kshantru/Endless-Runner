@@ -11,7 +11,7 @@ public class ObstacleManager : MonoBehaviour
    //  private float spawnGap = 6.0f;
     //private float safeZone = 32.0f;
     // private int amnTilesOnScreen = 7;
-    private int lastPrefabIndex = 0;
+    //private int lastPrefabIndex = 0;
 
   //  private List<GameObject> activeObstacles;
 
@@ -32,7 +32,7 @@ public class ObstacleManager : MonoBehaviour
 		public void SpawnObstacle()
 		{
 			// Choose a random point to spawn the obstacle
-			int obstacleSpawnIndex = Random.Range(1, 3);
+			int obstacleSpawnIndex = Random.Range(1, 4);
 			Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
 
 			// Spawn the obstace at the position
